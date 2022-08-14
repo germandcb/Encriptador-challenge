@@ -1,0 +1,215 @@
+:root {
+    --colorPrincipal: #0A7127 ;
+    --colorPrinciplaSecundario: #0a6122;
+    --colorFondo: #E6E6E6;
+    --colorBlanco: #FFFFFF;
+    --coloGris: #343A40;
+    --colorFondo: #f3f5fc;
+    --fondoBoton: #d8dfe8;
+    --colorNegro: black;
+
+    --fuentePrincipal: 'Raleway', sans-serif;
+}
+
+/**/
+html{
+    display: flex;
+    justify-content: center;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    max-width: 960px;
+    max-height: 660px;
+    background: var(--colorFondo);
+}
+
+.logo{
+    padding-top: 40px;
+    padding-left: 40px;
+}
+
+.contenedor{
+    margin: auto;
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr;
+    width: 960px;
+    height: 560px;
+    gap: 2%;
+}
+
+.encriptar{
+    width: 100%;
+}
+
+.caja__input{
+    width: 90%;
+    padding-top: 15%;
+    padding-bottom: 55%;
+    color: var(--colorPrincipal);
+    font-size: 24px;
+    border: none;
+    outline: none;
+    background: var(--colorFondo);
+}
+
+span {
+    background: var(--coloGris); 
+    color: var(--colorBlanco);
+    font-size: 14px;
+    padding: 4px 10px;
+    border-radius: 30px;
+}
+.encriptar p{
+    font-size: 14px;
+}
+.btn{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+}
+
+#btn-encriptar,
+#btn-desencritar{
+    padding: 24px;
+    width: 50%;
+    height: 20%;
+    border-radius: 24px;
+    border: 1px solid var(--colorPrincipal); 
+    font-size: 16px;
+    transition: 400ms;
+}
+
+#btn-encriptar{
+    background: var(--colorPrincipal);
+    color: var(--colorBlanco);
+}
+
+#btn-desencritar{
+    background: var(--colorBlanco);
+    color: var(--colorPrincipal);
+}
+
+#btn-encriptar:hover{background: var(--colorPrinciplaSecundario);}
+
+#btn-desencritar:hover,
+#copiar:hover{
+    background: var(--colorNegro);
+    border: 1px solid var(--colorNegro); 
+    color: var(--colorBlanco);
+}
+
+.resultado{
+    width: 80%;
+    height: 90%;
+    border-radius: 32px;
+    background: var(--colorBlanco);
+    display: grid;
+    text-align: center;
+    contain: content;
+    padding: 8% 10%;
+    align-items: center;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.contenido{
+    max-width: 100%;
+    height: 100%;
+}
+
+#imagen1{
+    width: 100%;
+    margin-top: 20%;
+}
+
+#text{
+    margin: 0px;
+    width: 100%;
+    font-size: 20px;
+}
+
+#textarea1{
+    width: 100%;
+    height: 80%;
+    color: var(--coloGris);
+    font-size: 14px;
+    text-align: center;
+    border: none;
+    outline: none;
+    background: var(--colorBlanco);
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+#copiar{
+    border-radius: 24px;
+    padding: 24px;
+    background: var(--colorBlanco);
+    display: none;
+    width: 100%;
+    border: 1px solid var(--colorPrincipal); 
+    color: var(--colorPrincipal);
+    font-size: 16px;
+    transition: 400ms;
+}
+
+/* Tablet */
+@media screen and (max-width:768px){
+    body{min-width: 100%;}
+    .contenedor{
+        max-width: 100%;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .contenedor{gap: 10%;}
+
+    br{display: none;}
+    .logo{
+        padding-top: 70px;
+        padding-left: 0px;  
+    }
+    #imagen1{
+        display: none;
+    }
+    .resultado{
+        padding: 2% 5%;
+        align-content: center;
+    }
+    .caja__input{
+        min-width: 100%;
+        padding-top: 10%;
+        padding-bottom: 35%;
+        font-size: 32px;
+    }
+    .encriptar{
+        max-width: 90%;
+    }
+    #textarea1{
+       height: max-content; 
+    }
+
+}
+
+/* Celular */
+@media screen and (max-width:468px){
+    .logo{padding-top: 20px;}
+    .caja__input{
+        padding-top: 25%;
+        padding-bottom: 75%;
+    }
+    .btn{
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+        gap: 24px; 
+    }
+    #btn-encriptar,
+    #btn-desencritar{
+        width: 100%;
+    }
+
+}

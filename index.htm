@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Encriptación</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
+        <script type="text/javascript" src="js/main.js"></script>
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="imagenes/Logologo.png" alt="Logo del sitio Web">
+        </header>
+        <div class="contenedor">
+                <br>
+                <div class="encriptar">
+                    <textarea id="inputTexto" class="caja__input" type="text" placeholder="Ingrese el texto aquí"></textarea>
+                    <p><span>!</span> Solo minusculas y sin acentos</p>
+                    <div class="btn">
+                        <button type="button" id="btn-encriptar" onclick="encriptar()">Encriptar</button>
+                        <button type="button" id="btn-desencritar" onclick="desencriptar()">Desencriptar</button>
+                    </div>
+                </div>
+                <div class="resultado">
+                    <div class="contenido">
+                        <img id="imagen1" src="imagenes/munecoi.png" alt="Texto no encontrado">
+                        <h2 id="text">Ningun mensaje fue encontrado</h2>
+                        <textarea name="name" id="textarea1">Ingrese el texto que desea encriptar o desencriptar</textarea>
+                        <button id="copiar" type="button" name="button" onclick="copiar()">Copiar</button>
+                    </div>
+                </div>
+        </div>
+    </body>
+</html>
